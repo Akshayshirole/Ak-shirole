@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>अक्षय शिरोळे - पोर्टफोलिओ</title>
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --text-light: #000000;
+      --bg-dark: #1a1a1a;
+      --text-dark: #f0f0f0;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    nav {
+      padding: 1rem 2rem;
+      background-color: #6200ea;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .title {
+      font-size: 1.5rem;
+    }
+    .toggle-btn {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .content {
+      padding: 3rem;
+      text-align: center;
+    }
+    .typing-text {
+      font-size: 2rem;
+      border-right: 2px solid;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: currentColor; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="title">माझं पोर्टफोलिओ</div>
+    <button class="toggle-btn" onclick="toggleMode()">डार्क/लाईट मोड</button>
+  </nav>
+  <div class="content">
+    <div class="typing-text" id="typing-text">नमस्कार! मी अक्षय शिरोळे आहे.</div>
+    <p>मी एक फ्रंट-एंड डेव्हलपर आहे. HTML, CSS, JavaScript मध्ये निपुणता आहे.</p>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>
